@@ -1,6 +1,5 @@
 //<<<<<< INCLUDES                                                       >>>>>>
 
-#include "Utilities/Configuration/interface/Architecture.h"
 #include "Utilities/RFIOAdaptor/interface/RFIOFile.h"
 #include "SealIOTools/StorageStreamBuf.h"
 #include "SealBase/Error.h"
