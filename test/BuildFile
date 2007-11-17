@@ -1,10 +1,4 @@
 <Use name=Utilities/RFIOAdaptor>
-
 <bin name=test_RFIOAdaptor_put file=put.cpp>
   <use name=castor>
-</bin>
-
-<bin name=test_RFIOAdaptor_stream file=ostream.cpp>
-  <use name=castor>
- <use name=Foundation/SealIOTools>
 </bin>
