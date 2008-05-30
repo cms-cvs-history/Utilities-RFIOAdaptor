@@ -98,7 +98,8 @@ public:
   virtual Storage *open (const std::string &proto,
 		         const std::string &path,
 			 int mode,
-			 const std::string &tmpdir)
+			 const std::string &tmpdir,
+                         int dcacheBufferSize)
   {
     return new RFIOFile (normalise(path), mode);
   }
