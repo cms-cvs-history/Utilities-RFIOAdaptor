@@ -15,11 +15,8 @@ pushd ${LOCAL_TMP_DIR}
     echo Skipping test.
     exit 0
   fi
-  filepostfix=`date +.%Y%M%d%H%m-${SCRAM_ARCH}-$$`
-  ${LOCAL_TOP_DIR}/test/${SCRAM_ARCH}/test_RFIOAdaptor_put ${filepostfix} || die "test_RFIOAdaptor_put" $?
-  castorfile=/castor/cern.ch/`whoami | sed 's|^\(.\)|user/\1/\1|'`/rfiotestput${filepostfix}
-  stager_rm -M ${castorfile}                         
-  rfrm ${castorfile}
+
+  ${LOCAL_TOP_DIR}/test/${SCRAM_ARCH}/test_RFIOAdaptor_put ${SCRAM_ARCH} || die "test_RFIOAdaptor_put" $?
 
 popd
 exit 0
